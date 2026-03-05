@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ray Catena Edison — Monthly Performance Dashboard</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/**
+ * STM Design System v4.0.0-alpha
+ * Single Throw Marketing - Internal Tools Theme
+ *
+ * Organized by Frost atomic design taxonomy:
+ *   Tokens (A-ABS) -> Atoms -> Molecules -> Organisms -> Templates
+ *
+ * @version 4.0.0-alpha
+ * @author STM Engineering Team
+ * @license Proprietary
+ */
+
+/* ========================================
+   DESIGN TOKENS (A-ABS-*)
+   Foundation variables. Everything builds on these.
+   - A-ABS-10: Color palette (colors.css)
+   - A-ABS-20: Spacing scale (spacing.css)
+   - A-ABS-30: Animation tokens (motion.css)
+   - A-ABS-40: Elevation/shadows (spacing.css)
+   - A-ABS-50: Border radius (spacing.css)
+   - A-ABS-60: Breakpoints (spacing.css)
+   - A-ABS-70: Z-index scale (spacing.css)
+   - A-ABS-80: Opacity scale (spacing.css)
+   ======================================== */
+
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/motion.css';
+
+/* ========================================
+   ATOMS: BUTTONS (A-BTN-*)
+   Primary, secondary, outline, ghost, danger
+   ======================================== */
+
+@import './components/buttons.css';
+
+/* ========================================
+   ATOMS: FORM ELEMENTS (A-FRM-*)
+   Inputs, textareas, selects, labels,
+   checkboxes, radios, validation
+   ======================================== */
+
+@import './components/forms.css';
+@import './components/advanced-forms.css';
+
+/* ========================================
+   ATOMS: STATUS & FEEDBACK (A-STS-*)
+   Badges, progress bars, skeleton loaders
+   ======================================== */
+
+@import './components/badges.css';
+
+/* ========================================
+   ATOMS: IMAGES (A-IMG-*)
+   Avatars, spinners
+   ======================================== */
+
+@import './components/avatar.css';
+@import './components/spinner.css';
+
+/* ========================================
+   ATOMS: MISC
+   Tags, dividers, rating
+   (Orphans pending inventory ID assignment)
+   ======================================== */
+
+@import './components/tag.css';
+@import './components/divider.css';
+@import './components/rating.css';
+
+/* ========================================
+   MOLECULES: FORMS (M-FRM-*)
+   Search, date pickers, form groups
+   ======================================== */
+
+@import './components/search-input.css';
+@import './components/datepicker.css';
+
+/* ========================================
+   MOLECULES: NAVIGATION (M-NAV-*)
+   Tabs, breadcrumbs, pagination
+   ======================================== */
+
+@import './components/pagination.css';
+
+/* ========================================
+   MOLECULES: DATA DISPLAY (M-DAT-*)
+   Cards, stat blocks, data lists
+   ======================================== */
+
+@import './components/cards.css';
+
+/* ========================================
+   MOLECULES: ACTIONS (M-ACT-*)
+   Dropdowns, action menus
+   ======================================== */
+
+@import './components/dropdown.css';
+
+/* ========================================
+   MOLECULES: MESSAGING (M-MSG-*)
+   Alerts, toasts, tooltips, popovers
+   ======================================== */
+
+@import './components/notifications.css';
+@import './components/tooltips.css';
+@import './components/popover.css';
+
+/* ========================================
+   ORGANISMS: GLOBAL (O-GLB-*)
+   Sidebar, top navbar, layouts
+   ======================================== */
+
+@import './components/navigation.css';
+@import './components/top-navbar.css';
+@import './components/layouts.css';
+
+/* ========================================
+   ORGANISMS: DATA (O-DAT-*)
+   Tables, timelines, activity feeds
+   ======================================== */
+
+@import './components/data-display.css';
+@import './components/timeline.css';
+
+/* ========================================
+   ORGANISMS: INTERACTIVE (O-INT-*)
+   Modals, dialogs, drawers, accordions,
+   steppers, command palette, notification center
+   ======================================== */
+
+@import './components/modals.css';
+@import './components/dialog.css';
+@import './components/drawer.css';
+@import './components/stepper.css';
+@import './components/complex-interactions.css';
+@import './components/notification-center.css';
+
+/* ========================================
+   ORGANISMS: DASHBOARD (O-DSH-*)
+   Chart wrappers, KPI cards, stat grids
+   ======================================== */
+
+@import './components/charts.css';
+@import './components/chart-wrappers.css';
+
+/* ========================================
+   ORGANISMS: AUTH & BRAND (Orphans)
+   Login pages, hero sections, auth forms,
+   brand patterns (pending inventory IDs)
+   ======================================== */
+
+@import './components/hero.css';
+@import './components/auth-form.css';
+@import './components/login.css';
+@import './components/brand.css';
+
+/* ========================================
+   ATOMS: ICONS (A-ICN-*)
+   SVG data URI icon atoms for AI/data
+   ======================================== */
+
+@import './components/icons.css';
+
+/* ========================================
+   MOLECULES: AI (M-AI-*)
+   AI response blocks, prompt input,
+   streaming text, recommendations, citations
+   ======================================== */
+
+@import './components/ai-molecules.css';
+
+/* ========================================
+   ORGANISMS: AI (O-AI-*)
+   Chat threads, recommendation lists,
+   anomaly panels, pipeline boards,
+   model output, insight cards
+   ======================================== */
+
+@import './components/ai-organisms.css';
+@import './components/reporting.css';
+
+/* ========================================
+   TEMPLATES (T-DSH-*, T-DAT-*, T-RPT-*, T-AI-*)
+   Page-level grid skeletons and content constraints
+   ======================================== */
+
+@import './components/templates.css';
+
+/* ========================================
+   PAGES (P-DSH-*, P-RPT-*, P-AUT-*, P-DAT-*, P-UTL-*)
+   Page preview frame + full-viewport composition wrapper
+   ======================================== */
+
+@import './components/pages.css';
+
+/* ========================================
+   POLISH COMPONENTS (Orphans)
+   Kbd, code block, meter, media, comments
+   (Pending inventory ID assignment)
+   ======================================== */
+
+@import './components/polish.css';
+
+/* ========================================
+   UTILITIES
+   Animations, spacing helpers, responsive
+   ======================================== */
+
+@import './utilities/animations.css';
+@import './utilities/spacing.css';
+@import './utilities/responsive.css';
+
+/**
+ * ========================================
+ * USAGE INSTRUCTIONS
+ * ========================================
+ *
+ * In Next.js (app directory):
+ * ```typescript
+ * // app/layout.tsx
+ * import '@/path/to/stm-design-system/theme.css'
+ * ```
+ *
+ * In React:
+ * ```typescript
+ * import 'stm-design-system/theme.css'
+ * ```
+ *
+ * In HTML:
+ * ```html
+ * <link rel="stylesheet" href="path/to/theme.css">
+ * ```
+ *
+ * ========================================
+ * WHAT'S INCLUDED
+ * ========================================
+ *
+ * Design Tokens:
+ * - Colors: Brand colors, semantic colors, gray scale
+ * - Typography: Font families, sizes, weights, line heights
+ * - Spacing: 8-point grid system, shadows, z-index
+ * - Motion: Animation timing and easing functions
+ *
+ * Components (40+):
+ *
+ * Basic (8):
+ * - Buttons (6 variants)
+ * - Forms (inputs, textareas, selects, validation)
+ * - Cards (3 types)
+ * - Badges (status indicators)
+ *
+ * Navigation (6):
+ * - Sidebar (collapsible, mobile-friendly)
+ * - Tabs (default and pill styles)
+ * - Breadcrumbs
+ * - Page headers
+ * - Dropdown menus
+ * - Navigation items
+ *
+ * Feedback (12):
+ * - Modals (5 sizes, mobile bottom sheet)
+ * - Confirmation dialogs
+ * - Drawers (left/right)
+ * - Alert dialogs
+ * - Toasts (4 variants)
+ * - Inline alerts
+ * - Banner notifications
+ * - Tooltips (4 positions)
+ * - Popovers (4 positions)
+ * - Context menus
+ * - Hover cards
+ *
+ * Data Display (8):
+ * - Tables (sortable, selectable, pagination)
+ * - Empty states
+ * - Loading skeletons
+ * - Progress bars (3 variants)
+ * - Data cards
+ * - Stat groups
+ * - Data lists
+ *
+ * Advanced Forms (10):
+ * - Toggle switches (3 sizes)
+ * - Radio groups (cards variant)
+ * - Checkbox groups
+ * - File upload (drag & drop)
+ * - Multi-step forms
+ * - Sliders
+ * - Color pickers
+ * - Tag inputs
+ *
+ * Complex Interactions (10):
+ * - Accordions
+ * - Collapsible sections
+ * - Command palette
+ * - Split panels
+ * - Tree view
+ * - Carousel/Slider
+ * - Avatar groups
+ * - Dividers
+ *
+ * Utilities:
+ * - 8 animation patterns
+ * - Loading spinners
+ * - Transition helpers
+ *
+ * ========================================
+ * PERFORMANCE
+ * ========================================
+ *
+ * Total CSS: ~6,000 lines
+ * Gzipped: ~15KB
+ * Render blocking: Minimal (single import)
+ *
+ * Optimizations:
+ * - CSS variables for runtime theming
+ * - Hardware-accelerated animations
+ * - Efficient selectors
+ * - No !important overrides
+ *
+ * ========================================
+ * BROWSER SUPPORT
+ * ========================================
+ *
+ * - Chrome 90+
+ * - Firefox 88+
+ * - Safari 14+
+ * - Edge 90+
+ * - Mobile browsers (iOS 14+, Android 10+)
+ *
+ * ========================================
+ * CUSTOMIZATION
+ * ========================================
+ *
+ * Override CSS variables in your app:
+ * ```css
+ * :root {
+ *   --stm-primary: #your-color;
+ *   --stm-radius-lg: 12px;
+ *   --stm-duration-fast: 100ms;
+ * }
+ * ```
+ *
+ * ========================================
+ * ACCESSIBILITY
+ * ========================================
+ *
+ * All components follow:
+ * - WCAG 2.1 Level AA standards
+ * - Keyboard navigation support
+ * - Screen reader compatibility
+ * - Focus management
+ * - ARIA patterns
+ * - Color contrast requirements
+ *
+ * ========================================
+ * DOCUMENTATION
+ * ========================================
+ *
+ * See README.md for:
+ * - Complete component documentation
+ * - Usage examples
+ * - Best practices
+ * - Migration guide
+ *
+ * See QUICKSTART.md for:
+ * - 5-minute setup guide
+ * - Common patterns
+ * - Quick reference
+ *
+ * See preview.html for:
+ * - Interactive component showcase
+ * - Visual reference
+ * - Copy-paste examples
+ *
+ * ========================================
+ * SUPPORT
+ * ========================================
+ *
+ * For questions or issues:
+ * - Internal: #design-system Slack channel
+ * - Email: engineering@singlethrow.com
+ * - Documentation: /docs/design-system
+ *
+ * ========================================
+ * VERSION HISTORY
+ * ========================================
+ *
+ * v2.0.0 (Current)
+ * - Added 32 new components
+ * - Enhanced accessibility
+ * - Improved performance
+ * - Complete documentation
+ *
+ * v1.0.0
+ * - Initial release
+ * - 8 base components
+ * - Design tokens
+ * - Basic utilities
+ *
+ * ========================================
+ * LICENSE
+ * ========================================
+ *
+ * Proprietary - Single Throw Marketing
+ * For internal use only
+ * © 2025 Single Throw Marketing
+ *
+ */
+
+</style>
+  <style>
+    /* Dashboard-specific overrides */
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--stm-page-background);
+      font-family: var(--stm-font-body);
+      color: var(--stm-foreground);
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--stm-space-8) var(--stm-space-6);
+    }
+
+    /* Header */
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--stm-space-10);
+      padding-bottom: var(--stm-space-6);
+      border-bottom: 2px solid var(--stm-border);
+    }
+
+    .dashboard-header-left {
+      display: flex;
+      align-items: center;
+      gap: var(--stm-space-5);
+    }
+
+    .dashboard-logo {
+      width: 48px;
+      height: 48px;
+      background: var(--stm-gradient-blue);
+      border-radius: var(--stm-radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: var(--stm-font-black);
+      font-size: var(--stm-text-xl);
+    }
+
+    .dashboard-title {
+      margin: 0;
+      font-family: var(--stm-font-headline);
+      font-size: var(--stm-text-2xl);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+    }
+
+    .dashboard-subtitle {
+      margin: var(--stm-space-1) 0 0;
+      font-size: var(--stm-text-sm);
+      color: var(--stm-muted-foreground);
+    }
+
+    .dashboard-period {
+      text-align: right;
+    }
+
+    .dashboard-month {
+      font-size: var(--stm-text-lg);
+      font-weight: var(--stm-font-semibold);
+      color: var(--stm-foreground);
+    }
+
+    .dashboard-date-range {
+      font-size: var(--stm-text-sm);
+      color: var(--stm-muted-foreground);
+    }
+
+    /* Section */
+    .dashboard-section {
+      margin-bottom: var(--stm-space-10);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: var(--stm-space-3);
+      margin-bottom: var(--stm-space-5);
+    }
+
+    .section-number {
+      width: 28px;
+      height: 28px;
+      background: var(--stm-primary);
+      color: white;
+      border-radius: var(--stm-radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-bold);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: var(--stm-font-headline);
+      font-size: var(--stm-text-lg);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+      text-transform: uppercase;
+      letter-spacing: var(--stm-tracking-wide);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--stm-border);
+    }
+
+    /* Screenshots grid */
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--stm-space-4);
+    }
+
+    .screenshot-card {
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--stm-shadow-sm);
+    }
+
+    .screenshot-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--stm-gray-100) 0%, var(--stm-gray-200) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--stm-muted-foreground);
+      font-size: var(--stm-text-sm);
+    }
+
+    .screenshot-label {
+      padding: var(--stm-space-3) var(--stm-space-4);
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-semibold);
+      color: var(--stm-foreground);
+      border-top: 1px solid var(--stm-border);
+    }
+
+    .screenshot-label span {
+      display: block;
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-normal);
+      color: var(--stm-muted-foreground);
+      margin-top: 2px;
+    }
+
+    /* Stat grids */
+    .stats-row-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--stm-space-4);
+    }
+
+    .stats-row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--stm-space-4);
+    }
+
+    .stats-row-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--stm-space-4);
+    }
+
+    /* Hero stat (big number with trend) */
+    .hero-stat {
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-xl);
+      padding: var(--stm-space-6) var(--stm-space-8);
+      box-shadow: var(--stm-shadow-sm);
+      margin-bottom: var(--stm-space-4);
+    }
+
+    .hero-stat-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--stm-space-4);
+    }
+
+    .hero-stat-value {
+      font-family: var(--stm-font-headline);
+      font-size: var(--stm-text-5xl);
+      font-weight: var(--stm-font-black);
+      color: var(--stm-foreground);
+      line-height: 1;
+      letter-spacing: var(--stm-tracking-tight);
+    }
+
+    .hero-stat-change {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--stm-space-1);
+      font-size: var(--stm-text-lg);
+      font-weight: var(--stm-font-semibold);
+      padding: var(--stm-space-1) var(--stm-space-3);
+      border-radius: var(--stm-radius-full);
+    }
+
+    .hero-stat-label {
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-medium);
+      color: var(--stm-muted-foreground);
+      text-transform: uppercase;
+      letter-spacing: var(--stm-tracking-wide);
+      margin-bottom: var(--stm-space-2);
+    }
+
+    .hero-stat-trend {
+      margin-top: var(--stm-space-4);
+      height: 48px;
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+    }
+
+    .trend-bar {
+      flex: 1;
+      background: var(--stm-single-50);
+      border-radius: 2px 2px 0 0;
+      transition: background 0.2s;
+    }
+
+    .trend-bar:last-child {
+      background: var(--stm-primary);
+    }
+
+    .trend-bar:nth-last-child(2) {
+      background: var(--stm-accent);
+    }
+
+    .trend-bar:nth-last-child(3) {
+      background: var(--stm-accent);
+      opacity: 0.7;
+    }
+
+    /* Change badges */
+    .change-up {
+      color: var(--stm-success);
+      background: var(--stm-success-light);
+    }
+
+    .change-down {
+      color: var(--stm-error);
+      background: var(--stm-error-light);
+    }
+
+    .change-neutral {
+      color: var(--stm-gray-500);
+      background: var(--stm-gray-100);
+    }
+
+    /* Top pages list */
+    .top-pages {
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--stm-shadow-sm);
+    }
+
+    .top-pages-header {
+      padding: var(--stm-space-4) var(--stm-space-5);
+      border-bottom: 1px solid var(--stm-border);
+    }
+
+    .top-pages-title {
+      margin: 0;
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-semibold);
+      color: var(--stm-foreground);
+      text-transform: uppercase;
+      letter-spacing: var(--stm-tracking-wide);
+    }
+
+    .top-pages-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-pages-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--stm-space-3) var(--stm-space-5);
+      border-bottom: 1px solid var(--stm-gray-100);
+      transition: background 0.15s;
+    }
+
+    .top-pages-item:last-child {
+      border-bottom: none;
+    }
+
+    .top-pages-item:hover {
+      background: var(--stm-gray-50);
+    }
+
+    .top-pages-page {
+      font-size: var(--stm-text-sm);
+      color: var(--stm-foreground);
+      font-family: var(--stm-font-mono);
+    }
+
+    .top-pages-value {
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+    }
+
+    /* Referral cards */
+    .referral-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--stm-space-4);
+    }
+
+    .referral-card {
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-lg);
+      padding: var(--stm-space-5);
+      box-shadow: var(--stm-shadow-sm);
+    }
+
+    .referral-card-title {
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-semibold);
+      color: var(--stm-muted-foreground);
+      text-transform: uppercase;
+      letter-spacing: var(--stm-tracking-wide);
+      margin: 0 0 var(--stm-space-1);
+    }
+
+    .referral-card-source {
+      font-size: var(--stm-text-xs);
+      color: var(--stm-muted-foreground);
+      margin: 0 0 var(--stm-space-4);
+    }
+
+    .referral-card-value {
+      font-family: var(--stm-font-headline);
+      font-size: var(--stm-text-3xl);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+      margin: 0 0 var(--stm-space-1);
+    }
+
+    .referral-card-change {
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-semibold);
+      margin-bottom: var(--stm-space-4);
+    }
+
+    .referral-entry-pages {
+      margin-top: var(--stm-space-3);
+      padding-top: var(--stm-space-3);
+      border-top: 1px solid var(--stm-gray-100);
+    }
+
+    .referral-entry-label {
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-semibold);
+      color: var(--stm-muted-foreground);
+      text-transform: uppercase;
+      letter-spacing: var(--stm-tracking-wide);
+      margin: 0 0 var(--stm-space-2);
+    }
+
+    .referral-entry-item {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--stm-space-1) 0;
+      font-size: var(--stm-text-sm);
+    }
+
+    .referral-entry-page {
+      color: var(--stm-muted-foreground);
+    }
+
+    .referral-entry-count {
+      font-weight: var(--stm-font-semibold);
+      color: var(--stm-foreground);
+    }
+
+    /* GBP section */
+    .gbp-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--stm-space-4);
+      margin-top: var(--stm-space-4);
+    }
+
+    .gbp-action-card {
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-lg);
+      padding: var(--stm-space-4) var(--stm-space-5);
+      text-align: center;
+      box-shadow: var(--stm-shadow-sm);
+    }
+
+    .gbp-action-icon {
+      font-size: var(--stm-text-2xl);
+      margin-bottom: var(--stm-space-2);
+    }
+
+    .gbp-action-value {
+      font-family: var(--stm-font-headline);
+      font-size: var(--stm-text-2xl);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+    }
+
+    .gbp-action-label {
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-medium);
+      color: var(--stm-muted-foreground);
+      text-transform: uppercase;
+      letter-spacing: var(--stm-tracking-wide);
+      margin-top: var(--stm-space-1);
+    }
+
+    .gbp-action-change {
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-semibold);
+      margin-top: var(--stm-space-1);
+    }
+
+    /* New badge */
+    .badge-new {
+      display: inline-block;
+      background: var(--stm-accent);
+      color: white;
+      font-size: 10px;
+      font-weight: var(--stm-font-bold);
+      padding: 2px 8px;
+      border-radius: var(--stm-radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-left: var(--stm-space-2);
+    }
+
+    /* Footer */
+    .dashboard-footer {
+      margin-top: var(--stm-space-12);
+      padding-top: var(--stm-space-6);
+      border-top: 1px solid var(--stm-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--stm-space-3);
+    }
+
+    .footer-logo {
+      width: 32px;
+      height: 32px;
+      background: var(--stm-gradient-blue);
+      border-radius: var(--stm-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: var(--stm-font-bold);
+      font-size: var(--stm-text-xs);
+    }
+
+    .footer-text {
+      font-size: var(--stm-text-xs);
+      color: var(--stm-muted-foreground);
+    }
+
+    .footer-contact {
+      font-size: var(--stm-text-xs);
+      color: var(--stm-muted-foreground);
+    }
+
+    /* AI traffic special treatment */
+    .ai-source-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--stm-space-3);
+      padding: var(--stm-space-2) 0;
+    }
+
+    .ai-source-name {
+      font-size: var(--stm-text-sm);
+      color: var(--stm-foreground);
+      width: 100px;
+      flex-shrink: 0;
+    }
+
+    .ai-source-bar-track {
+      flex: 1;
+      height: 8px;
+      background: var(--stm-gray-100);
+      border-radius: var(--stm-radius-full);
+      overflow: hidden;
+    }
+
+    .ai-source-bar-fill {
+      height: 100%;
+      background: var(--stm-accent);
+      border-radius: var(--stm-radius-full);
+    }
+
+    .ai-source-count {
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+      width: 48px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .stats-row-4 { grid-template-columns: repeat(2, 1fr); }
+      .stats-row-3 { grid-template-columns: 1fr; }
+      .stats-row-2 { grid-template-columns: 1fr; }
+      .screenshots-grid { grid-template-columns: 1fr; }
+      .referral-grid { grid-template-columns: 1fr; }
+      .gbp-actions-grid { grid-template-columns: 1fr; }
+      .dashboard-header { flex-direction: column; align-items: flex-start; gap: var(--stm-space-4); }
+      .hero-stat-value { font-size: var(--stm-text-4xl); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- HEADER -->
+  <header class="dashboard-header">
+    <div class="dashboard-header-left">
+      <div class="dashboard-logo">RC</div>
+      <div>
+        <h1 class="dashboard-title">Ray Catena Edison</h1>
+        <p class="dashboard-subtitle">Monthly Performance Dashboard</p>
+      </div>
+    </div>
+    <div class="dashboard-period">
+      <div class="dashboard-month">January 2026</div>
+      <div class="dashboard-date-range">Jan 1 – Jan 31, 2026</div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: SERP SCREENSHOTS -->
+  <section class="dashboard-section">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2 class="section-title">SERP Presence</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="screenshots-grid">
+      <div class="screenshot-card">
+        <div class="screenshot-placeholder">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="screenshot-label">
+          Google Page 1
+          <span>"ray catena edison" — Position #1</span>
+        </div>
+      </div>
+      <div class="screenshot-card">
+        <div class="screenshot-placeholder">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="screenshot-label">
+          Google Maps Pack
+          <span>Local 3-pack visibility</span>
+        </div>
+      </div>
+      <div class="screenshot-card">
+        <div class="screenshot-placeholder">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4v1a1 1 0 001 1h1a4 4 0 010 8h-1a1 1 0 00-1 1v1a4 4 0 01-8 0v-1a1 1 0 00-1-1H6a4 4 0 010-8h1a1 1 0 001-1V6a4 4 0 014-4z"/></svg>
+        </div>
+        <div class="screenshot-label">
+          AI Overview
+          <span>Google SGE / AI-generated results</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: ORGANIC TRAFFIC -->
+  <section class="dashboard-section">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2 class="section-title">Organic Traffic</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="hero-stat">
+      <div class="hero-stat-label">Total Organic Sessions</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat-value">12,400</div>
+        <span class="hero-stat-change change-up">&#9650; 14%</span>
+      </div>
+      <div class="hero-stat-trend">
+        <div class="trend-bar" style="height:30%"></div>
+        <div class="trend-bar" style="height:32%"></div>
+        <div class="trend-bar" style="height:38%"></div>
+        <div class="trend-bar" style="height:40%"></div>
+        <div class="trend-bar" style="height:45%"></div>
+        <div class="trend-bar" style="height:50%"></div>
+        <div class="trend-bar" style="height:52%"></div>
+        <div class="trend-bar" style="height:58%"></div>
+        <div class="trend-bar" style="height:62%"></div>
+        <div class="trend-bar" style="height:70%"></div>
+        <div class="trend-bar" style="height:78%"></div>
+        <div class="trend-bar" style="height:100%"></div>
+      </div>
+    </div>
+
+    <div class="stats-row-2">
+      <div class="top-pages">
+        <div class="top-pages-header">
+          <h3 class="top-pages-title">Top Pages</h3>
+        </div>
+        <ul class="top-pages-list">
+          <li class="top-pages-item">
+            <span class="top-pages-page">/new-inventory</span>
+            <span class="top-pages-value">3,200</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">/pre-owned</span>
+            <span class="top-pages-value">2,100</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">/service</span>
+            <span class="top-pages-value">1,800</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">/specials</span>
+            <span class="top-pages-value">940</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="top-pages">
+        <div class="top-pages-header">
+          <h3 class="top-pages-title">Content Performance</h3>
+        </div>
+        <ul class="top-pages-list">
+          <li class="top-pages-item">
+            <span class="top-pages-page">Model pages</span>
+            <span class="top-pages-value">2,420</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">Blog posts</span>
+            <span class="top-pages-value">1,840</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">Service pages</span>
+            <span class="top-pages-value">1,800</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">Landing pages</span>
+            <span class="top-pages-value">960</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: HIGH-INTENT TRAFFIC -->
+  <section class="dashboard-section">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2 class="section-title">High-Intent Traffic</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="hero-stat">
+      <div class="hero-stat-label">High-Intent Sessions</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat-value">4,780</div>
+        <span class="hero-stat-change change-up">&#9650; 22%</span>
+        <span style="font-size:var(--stm-text-sm); color:var(--stm-muted-foreground); margin-left:var(--stm-space-2);">38% of total organic</span>
+      </div>
+    </div>
+
+    <div class="stats-row-4">
+      <div class="stm-stat-card stm-stat-card-default stm-stat-card-md">
+        <div class="stm-stat-card-header">
+          <span class="stm-stat-card-label">New Inventory</span>
+        </div>
+        <div class="stm-stat-card-content">
+          <div class="stm-stat-card-value-row">
+            <span class="stm-stat-card-value">2,340</span>
+            <span class="stm-stat-card-change stm-stat-card-change-positive">
+              <span class="stm-stat-card-change-icon">&#9650;</span>
+              18%
+            </span>
+          </div>
+          <p class="stm-stat-card-description">vs prior month</p>
+        </div>
+      </div>
+
+      <div class="stm-stat-card stm-stat-card-default stm-stat-card-md">
+        <div class="stm-stat-card-header">
+          <span class="stm-stat-card-label">Pre-Owned</span>
+        </div>
+        <div class="stm-stat-card-content">
+          <div class="stm-stat-card-value-row">
+            <span class="stm-stat-card-value">1,120</span>
+            <span class="stm-stat-card-change stm-stat-card-change-positive">
+              <span class="stm-stat-card-change-icon">&#9650;</span>
+              31%
+            </span>
+          </div>
+          <p class="stm-stat-card-description">vs prior month</p>
+        </div>
+      </div>
+
+      <div class="stm-stat-card stm-stat-card-default stm-stat-card-md">
+        <div class="stm-stat-card-header">
+          <span class="stm-stat-card-label">Service Pages</span>
+        </div>
+        <div class="stm-stat-card-content">
+          <div class="stm-stat-card-value-row">
+            <span class="stm-stat-card-value">890</span>
+            <span class="stm-stat-card-change stm-stat-card-change-positive">
+              <span class="stm-stat-card-change-icon">&#9650;</span>
+              12%
+            </span>
+          </div>
+          <p class="stm-stat-card-description">vs prior month</p>
+        </div>
+      </div>
+
+      <div class="stm-stat-card stm-stat-card-default stm-stat-card-md">
+        <div class="stm-stat-card-header">
+          <span class="stm-stat-card-label">Contact Pages</span>
+        </div>
+        <div class="stm-stat-card-content">
+          <div class="stm-stat-card-value-row">
+            <span class="stm-stat-card-value">430</span>
+            <span class="stm-stat-card-change stm-stat-card-change-positive">
+              <span class="stm-stat-card-change-icon">&#9650;</span>
+              8%
+            </span>
+          </div>
+          <p class="stm-stat-card-description">vs prior month</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: AI TRAFFIC -->
+  <section class="dashboard-section">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2 class="section-title">AI Traffic</h2>
+      <span class="badge-new">New Metric</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="hero-stat">
+      <div class="hero-stat-label">AI-Referred Sessions</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat-value">340</div>
+        <span style="font-size:var(--stm-text-sm); color:var(--stm-muted-foreground);">Tracking since Oct 2025</span>
+      </div>
+      <div class="hero-stat-trend">
+        <div class="trend-bar" style="height:10%"></div>
+        <div class="trend-bar" style="height:18%"></div>
+        <div class="trend-bar" style="height:30%"></div>
+        <div class="trend-bar" style="height:55%"></div>
+        <div class="trend-bar" style="height:72%"></div>
+        <div class="trend-bar" style="height:100%"></div>
+      </div>
+    </div>
+
+    <div class="stats-row-2">
+      <div style="background:var(--stm-card); border:1px solid var(--stm-border); border-radius:var(--stm-radius-lg); padding:var(--stm-space-5); box-shadow:var(--stm-shadow-sm);">
+        <h3 style="margin:0 0 var(--stm-space-4); font-size:var(--stm-text-sm); font-weight:600; color:var(--stm-muted-foreground); text-transform:uppercase; letter-spacing:var(--stm-tracking-wide);">Sources</h3>
+        <div class="ai-source-bar">
+          <span class="ai-source-name">ChatGPT</span>
+          <div class="ai-source-bar-track"><div class="ai-source-bar-fill" style="width:42%"></div></div>
+          <span class="ai-source-count">142</span>
+        </div>
+        <div class="ai-source-bar">
+          <span class="ai-source-name">Perplexity</span>
+          <div class="ai-source-bar-track"><div class="ai-source-bar-fill" style="width:29%"></div></div>
+          <span class="ai-source-count">98</span>
+        </div>
+        <div class="ai-source-bar">
+          <span class="ai-source-name">Google AI</span>
+          <div class="ai-source-bar-track"><div class="ai-source-bar-fill" style="width:20%"></div></div>
+          <span class="ai-source-count">67</span>
+        </div>
+        <div class="ai-source-bar">
+          <span class="ai-source-name">Other</span>
+          <div class="ai-source-bar-track"><div class="ai-source-bar-fill" style="width:10%"></div></div>
+          <span class="ai-source-count">33</span>
+        </div>
+      </div>
+
+      <div class="top-pages">
+        <div class="top-pages-header">
+          <h3 class="top-pages-title">Top Landing Pages (AI Traffic)</h3>
+        </div>
+        <ul class="top-pages-list">
+          <li class="top-pages-item">
+            <span class="top-pages-page">/new-inventory</span>
+            <span class="top-pages-value">124</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">/pre-owned</span>
+            <span class="top-pages-value">89</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">/about</span>
+            <span class="top-pages-value">65</span>
+          </li>
+          <li class="top-pages-item">
+            <span class="top-pages-page">/service</span>
+            <span class="top-pages-value">62</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: GROUP SITE REFERRALS -->
+  <section class="dashboard-section">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2 class="section-title">Group Site Referrals</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="referral-grid">
+      <div class="referral-card">
+        <h3 class="referral-card-title">From Group Site</h3>
+        <p class="referral-card-source">raycatena.com &rarr; this dealership</p>
+        <div class="referral-card-value">1,240</div>
+        <div class="referral-card-change" style="color:var(--stm-success);">&#9650; 9% vs prior month</div>
+        <div class="referral-entry-pages">
+          <p class="referral-entry-label">Top Entry Pages</p>
+          <div class="referral-entry-item">
+            <span class="referral-entry-page">/new-inventory</span>
+            <span class="referral-entry-count">480</span>
+          </div>
+          <div class="referral-entry-item">
+            <span class="referral-entry-page">/homepage</span>
+            <span class="referral-entry-count">440</span>
+          </div>
+          <div class="referral-entry-item">
+            <span class="referral-entry-page">/specials</span>
+            <span class="referral-entry-count">320</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="referral-card">
+        <h3 class="referral-card-title">From Sister Dealerships</h3>
+        <p class="referral-card-source">Cross-brand browsing within Catena network</p>
+        <div class="referral-card-value">280</div>
+        <div class="referral-card-change" style="color:var(--stm-success);">&#9650; 14% vs prior month</div>
+        <div class="referral-entry-pages">
+          <p class="referral-entry-label">Referring Dealerships</p>
+          <div class="referral-entry-item">
+            <span class="referral-entry-page">RC Maserati</span>
+            <span class="referral-entry-count">124</span>
+          </div>
+          <div class="referral-entry-item">
+            <span class="referral-entry-page">RC Mercedes</span>
+            <span class="referral-entry-count">89</span>
+          </div>
+          <div class="referral-entry-item">
+            <span class="referral-entry-page">RC Porsche</span>
+            <span class="referral-entry-count">67</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: LOCAL (GBP) -->
+  <section class="dashboard-section">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2 class="section-title">Google Business Profile</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="stats-row-2">
+      <div class="stm-stat-card stm-stat-card-default stm-stat-card-lg">
+        <div class="stm-stat-card-header">
+          <span class="stm-stat-card-label">Impressions</span>
+        </div>
+        <div class="stm-stat-card-content">
+          <div class="stm-stat-card-value-row">
+            <span class="stm-stat-card-value">48,200</span>
+            <span class="stm-stat-card-change stm-stat-card-change-positive">
+              <span class="stm-stat-card-change-icon">&#9650;</span>
+              11%
+            </span>
+          </div>
+          <p class="stm-stat-card-description">People who saw this listing in Search and Maps</p>
+        </div>
+      </div>
+
+      <div class="stm-stat-card stm-stat-card-default stm-stat-card-lg">
+        <div class="stm-stat-card-header">
+          <span class="stm-stat-card-label">Clicks</span>
+        </div>
+        <div class="stm-stat-card-content">
+          <div class="stm-stat-card-value-row">
+            <span class="stm-stat-card-value">3,840</span>
+            <span class="stm-stat-card-change stm-stat-card-change-positive">
+              <span class="stm-stat-card-change-icon">&#9650;</span>
+              7%
+            </span>
+          </div>
+          <p class="stm-stat-card-description">Actions taken from the listing</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gbp-actions-grid">
+      <div class="gbp-action-card">
+        <div class="gbp-action-icon">&#128222;</div>
+        <div class="gbp-action-value">620</div>
+        <div class="gbp-action-label">Calls</div>
+        <div class="gbp-action-change" style="color:var(--stm-success);">&#9650; 4%</div>
+      </div>
+      <div class="gbp-action-card">
+        <div class="gbp-action-icon">&#128205;</div>
+        <div class="gbp-action-value">890</div>
+        <div class="gbp-action-label">Directions</div>
+        <div class="gbp-action-change" style="color:var(--stm-success);">&#9650; 12%</div>
+      </div>
+      <div class="gbp-action-card">
+        <div class="gbp-action-icon">&#127760;</div>
+        <div class="gbp-action-value">2,330</div>
+        <div class="gbp-action-label">Website Visits</div>
+        <div class="gbp-action-change" style="color:var(--stm-success);">&#9650; 6%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="dashboard-footer">
+    <div class="footer-brand">
+      <div class="footer-logo">STM</div>
+      <div class="footer-text">
+        Prepared by Single Throw Marketing<br>
+        Data period: January 2026
+      </div>
+    </div>
+    <div class="footer-contact">
+      Questions? Contact your account team.
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

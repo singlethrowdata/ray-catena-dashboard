@@ -15358,6 +15358,44 @@
       background: var(--stm-border);
     }
 
+    /* Inline callout bar (Option B) */
+    .explainer-bar {
+      display: flex;
+      gap: var(--stm-space-6);
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-lg);
+      padding: var(--stm-space-4) var(--stm-space-5);
+      margin-bottom: var(--stm-space-5);
+      box-shadow: var(--stm-shadow-sm);
+    }
+
+    .explainer-bar-block {
+      display: flex;
+      gap: var(--stm-space-2);
+      align-items: baseline;
+    }
+
+    .explainer-bar-block + .explainer-bar-block {
+      padding-left: var(--stm-space-6);
+      border-left: 1px solid var(--stm-border);
+    }
+
+    .explainer-bar .explainer-label {
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    .explainer-bar .explainer-text {
+      font-size: var(--stm-text-xs);
+      color: var(--stm-muted-foreground);
+      line-height: 1.5;
+      margin: 0;
+    }
+
     /* Section body: explainer + content layout */
     .section-body {
       display: grid;
@@ -15869,19 +15907,16 @@
       <div class="section-line"></div>
     </div>
 
-    <div class="section-body">
-    <div class="section-explainer">
-      <p class="explainer-name">SERP Presence</p>
-      <div class="explainer-block">
+    <div class="explainer-bar">
+      <div class="explainer-bar-block">
         <p class="explainer-label">What it is:</p>
         <p class="explainer-text">A visual snapshot of how Ray Catena Edison appears across Google's search surfaces — organic results, Maps, and AI-generated answers.</p>
       </div>
-      <div class="explainer-block">
+      <div class="explainer-bar-block">
         <p class="explainer-label">Why it matters:</p>
         <p class="explainer-text">Owning multiple positions on a single results page increases brand visibility and reduces the chance a competitor captures the click.</p>
       </div>
     </div>
-    <div class="section-main">
     <div class="screenshots-grid">
       <div class="screenshot-card">
         <div class="screenshot-placeholder">
@@ -15911,8 +15946,6 @@
         </div>
       </div>
     </div>
-    </div><!-- /section-main -->
-    </div><!-- /section-body -->
   </section>
 
   <!-- SECTION 2: ORGANIC TRAFFIC -->

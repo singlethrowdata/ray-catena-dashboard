@@ -15358,6 +15358,61 @@
       background: var(--stm-border);
     }
 
+    /* Section body: explainer + content layout */
+    .section-body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: var(--stm-space-6);
+      align-items: start;
+    }
+
+    .section-explainer {
+      background: var(--stm-card);
+      border: 1px solid var(--stm-border);
+      border-radius: var(--stm-radius-lg);
+      padding: var(--stm-space-5);
+      box-shadow: var(--stm-shadow-sm);
+      position: sticky;
+      top: var(--stm-space-6);
+    }
+
+    .explainer-name {
+      font-family: var(--stm-font-headline);
+      font-size: var(--stm-text-sm);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-primary);
+      margin: 0 0 var(--stm-space-4);
+      padding-bottom: var(--stm-space-3);
+      border-bottom: 1px solid var(--stm-border);
+    }
+
+    .explainer-block {
+      margin-bottom: var(--stm-space-4);
+    }
+
+    .explainer-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .explainer-label {
+      font-size: var(--stm-text-xs);
+      font-weight: var(--stm-font-bold);
+      color: var(--stm-foreground);
+      margin: 0 0 var(--stm-space-1);
+    }
+
+    .explainer-text {
+      font-size: var(--stm-text-xs);
+      color: var(--stm-muted-foreground);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .section-body { grid-template-columns: 1fr; }
+      .section-explainer { position: static; }
+    }
+
     /* Screenshots grid */
     .screenshots-grid {
       display: grid;
@@ -15814,6 +15869,19 @@
       <div class="section-line"></div>
     </div>
 
+    <div class="section-body">
+    <div class="section-explainer">
+      <p class="explainer-name">SERP Presence</p>
+      <div class="explainer-block">
+        <p class="explainer-label">What it is:</p>
+        <p class="explainer-text">A visual snapshot of how Ray Catena Edison appears across Google's search surfaces — organic results, Maps, and AI-generated answers.</p>
+      </div>
+      <div class="explainer-block">
+        <p class="explainer-label">Why it matters:</p>
+        <p class="explainer-text">Owning multiple positions on a single results page increases brand visibility and reduces the chance a competitor captures the click.</p>
+      </div>
+    </div>
+    <div class="section-main">
     <div class="screenshots-grid">
       <div class="screenshot-card">
         <div class="screenshot-placeholder">
@@ -15843,6 +15911,8 @@
         </div>
       </div>
     </div>
+    </div><!-- /section-main -->
+    </div><!-- /section-body -->
   </section>
 
   <!-- SECTION 2: ORGANIC TRAFFIC -->
@@ -15853,6 +15923,19 @@
       <div class="section-line"></div>
     </div>
 
+    <div class="section-body">
+    <div class="section-explainer">
+      <p class="explainer-name">Organic Traffic</p>
+      <div class="explainer-block">
+        <p class="explainer-label">What it is:</p>
+        <p class="explainer-text">Total visits to the site from unpaid Google search results, broken down by page and content type.</p>
+      </div>
+      <div class="explainer-block">
+        <p class="explainer-label">Why it matters:</p>
+        <p class="explainer-text">Organic traffic is the primary indicator of SEO health. Growth here means the site is earning visibility without additional ad spend.</p>
+      </div>
+    </div>
+    <div class="section-main">
     <div class="hero-stat">
       <div class="hero-stat-label">Total Organic Sessions</div>
       <div class="hero-stat-row">
@@ -15924,6 +16007,8 @@
         </ul>
       </div>
     </div>
+    </div><!-- /section-main -->
+    </div><!-- /section-body -->
   </section>
 
   <!-- SECTION 3: HIGH-INTENT TRAFFIC -->
@@ -15934,6 +16019,19 @@
       <div class="section-line"></div>
     </div>
 
+    <div class="section-body">
+    <div class="section-explainer">
+      <p class="explainer-name">High-Intent Traffic</p>
+      <div class="explainer-block">
+        <p class="explainer-label">What it is:</p>
+        <p class="explainer-text">Sessions to pages where visitors are actively shopping — inventory, service scheduling, specials, and contact pages.</p>
+      </div>
+      <div class="explainer-block">
+        <p class="explainer-label">Why it matters:</p>
+        <p class="explainer-text">High-intent traffic is the closest leading indicator to showroom visits. Growth here directly correlates with sales pipeline activity.</p>
+      </div>
+    </div>
+    <div class="section-main">
     <div class="hero-stat">
       <div class="hero-stat-label">High-Intent Sessions</div>
       <div class="hero-stat-row">
@@ -16008,6 +16106,8 @@
         </div>
       </div>
     </div>
+    </div><!-- /section-main -->
+    </div><!-- /section-body -->
   </section>
 
   <!-- SECTION 4: AI TRAFFIC -->
@@ -16019,6 +16119,19 @@
       <div class="section-line"></div>
     </div>
 
+    <div class="section-body">
+    <div class="section-explainer">
+      <p class="explainer-name">AI Traffic</p>
+      <div class="explainer-block">
+        <p class="explainer-label">What it is:</p>
+        <p class="explainer-text">Sessions originating from AI tools — ChatGPT, Perplexity, Google AI Overviews — where the assistant recommended or linked to the site.</p>
+      </div>
+      <div class="explainer-block">
+        <p class="explainer-label">Why it matters:</p>
+        <p class="explainer-text">AI search is an emerging acquisition channel. Tracking it now establishes a baseline before it becomes a significant share of discovery traffic.</p>
+      </div>
+    </div>
+    <div class="section-main">
     <div class="hero-stat">
       <div class="hero-stat-label">AI-Referred Sessions</div>
       <div class="hero-stat-row">
@@ -16084,6 +16197,8 @@
         </ul>
       </div>
     </div>
+    </div><!-- /section-main -->
+    </div><!-- /section-body -->
   </section>
 
   <!-- SECTION 5: GROUP SITE REFERRALS -->
@@ -16094,6 +16209,19 @@
       <div class="section-line"></div>
     </div>
 
+    <div class="section-body">
+    <div class="section-explainer">
+      <p class="explainer-name">Group Site Referrals</p>
+      <div class="explainer-block">
+        <p class="explainer-label">What it is:</p>
+        <p class="explainer-text">Traffic referred to this dealership from raycatena.com and sister dealerships within the Ray Catena network.</p>
+      </div>
+      <div class="explainer-block">
+        <p class="explainer-label">Why it matters:</p>
+        <p class="explainer-text">Group referrals represent warm, brand-aware visitors already in the buying ecosystem. High referral volume signals strong network cross-sell.</p>
+      </div>
+    </div>
+    <div class="section-main">
     <div class="referral-grid">
       <div class="referral-card">
         <h3 class="referral-card-title">From Group Site</h3>
@@ -16139,6 +16267,8 @@
         </div>
       </div>
     </div>
+    </div><!-- /section-main -->
+    </div><!-- /section-body -->
   </section>
 
   <!-- SECTION 6: LOCAL (GBP) -->
@@ -16149,6 +16279,19 @@
       <div class="section-line"></div>
     </div>
 
+    <div class="section-body">
+    <div class="section-explainer">
+      <p class="explainer-name">Google Business Profile</p>
+      <div class="explainer-block">
+        <p class="explainer-label">What it is:</p>
+        <p class="explainer-text">Engagement data from the dealership's Google Business Profile — how many people saw it, clicked it, called, or asked for directions.</p>
+      </div>
+      <div class="explainer-block">
+        <p class="explainer-label">Why it matters:</p>
+        <p class="explainer-text">GBP is often the first touchpoint for local buyers. Calls and direction requests are direct purchase-intent signals that don't require a website visit.</p>
+      </div>
+    </div>
+    <div class="section-main">
     <div class="stats-row-2">
       <div class="stm-stat-card stm-stat-card-default stm-stat-card-lg">
         <div class="stm-stat-card-header">
@@ -16203,6 +16346,8 @@
         <div class="gbp-action-change" style="color:var(--stm-success);">&#9650; 6%</div>
       </div>
     </div>
+    </div><!-- /section-main -->
+    </div><!-- /section-body -->
   </section>
 
   <!-- FOOTER -->

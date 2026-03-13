@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Arial,sans-serif">
+  <rect width="760" height="440" fill="#fff"/>
+  <!-- Map background (right side) -->
+  <rect x="460" y="0" width="300" height="440" fill="#e8f0f8"/>
+  <!-- Map roads (simplified) -->
+  <line x1="460" y1="180" x2="760" y2="180" stroke="#fff" stroke-width="6"/>
+  <line x1="460" y1="280" x2="760" y2="280" stroke="#fff" stroke-width="6"/>
+  <line x1="580" y1="0" x2="580" y2="440" stroke="#fff" stroke-width="6"/>
+  <line x1="650" y1="0" x2="650" y2="440" stroke="#fff" stroke-width="4"/>
+  <line x1="530" y1="0" x2="530" y2="440" stroke="#fff" stroke-width="3"/>
+  <!-- Map pins -->
+  <ellipse cx="562" cy="170" rx="5" ry="3" fill="rgba(0,0,0,0.15)"/>
+  <path d="M562,145 a12,12 0 0,1 0,24 a12,12 0 0,1 0,-24 z" fill="#EA4335"/>
+  <circle cx="562" cy="153" r="5" fill="#fff"/>
+  <text x="578" y="158" fill="#202124" font-size="11" font-weight="600">Ray Catena Edison</text>
+  <ellipse cx="620" cy="262" rx="4" ry="2" fill="rgba(0,0,0,0.15)"/>
+  <path d="M620,242 a9,9 0 0,1 0,18 a9,9 0 0,1 0,-18 z" fill="#4d5156"/>
+  <circle cx="620" cy="248" r="3.5" fill="#fff"/>
+  <ellipse cx="510" cy="302" rx="4" ry="2" fill="rgba(0,0,0,0.15)"/>
+  <path d="M510,282 a9,9 0 0,1 0,18 a9,9 0 0,1 0,-18 z" fill="#4d5156"/>
+  <circle cx="510" cy="288" r="3.5" fill="#fff"/>
+  <!-- Left panel header -->
+  <text x="24" y="32" fill="#202124" font-size="16" font-weight="600">Places</text>
+  <rect y="42" width="460" height="1" fill="#e0e0e0"/>
+  <!-- Listing 1 — Ray Catena Edison (highlighted) -->
+  <rect x="0" y="43" width="460" height="118" fill="#f8fffe"/>
+  <rect x="0" y="43" width="3" height="118" fill="#1a73e8"/>
+  <circle cx="22" cy="78" r="10" fill="#EA4335"/>
+  <text x="22" y="83" fill="white" font-size="11" font-weight="bold" text-anchor="middle">1</text>
+  <text x="42" y="72" fill="#202124" font-size="15" font-weight="700">Ray Catena Edison</text>
+  <text x="42" y="89" fill="#FBBC04" font-size="14">★★★★★</text>
+  <text x="120" y="89" fill="#70757a" font-size="12">4.8 (1,247)</text>
+  <text x="42" y="107" fill="#70757a" font-size="12">Mercedes-Benz dealer · 400 US-1, Edison, NJ 08817</text>
+  <text x="42" y="124" fill="#34A853" font-size="12" font-weight="600">Open ·</text>
+  <text x="82" y="124" fill="#70757a" font-size="12">Closes 8 PM · (732) 985-1000</text>
+  <rect x="24" y="135" width="80" height="22" rx="11" fill="#1a73e8"/>
+  <text x="64" y="151" fill="white" font-size="11" font-weight="600" text-anchor="middle">Directions</text>
+  <rect x="114" y="135" width="60" height="22" rx="11" fill="white" stroke="#dadce0" stroke-width="1"/>
+  <text x="144" y="151" fill="#1a73e8" font-size="11" font-weight="600" text-anchor="middle">Website</text>
+  <rect x="184" y="135" width="50" height="22" rx="11" fill="white" stroke="#dadce0" stroke-width="1"/>
+  <text x="209" y="151" fill="#1a73e8" font-size="11" font-weight="600" text-anchor="middle">Call</text>
+  <rect x="0" y="161" width="460" height="1" fill="#e0e0e0"/>
+  <!-- Listing 2 -->
+  <circle cx="22" cy="192" r="10" fill="#4d5156"/>
+  <text x="22" y="197" fill="white" font-size="11" font-weight="bold" text-anchor="middle">2</text>
+  <text x="42" y="186" fill="#202124" font-size="14" font-weight="600">Open Road Mercedes-Benz of Edison</text>
+  <text x="42" y="202" fill="#FBBC04" font-size="13">★★★★</text>
+  <text x="110" y="202" fill="#70757a" font-size="12">4.2 (834)</text>
+  <text x="42" y="218" fill="#70757a" font-size="12">Mercedes-Benz dealer · 275 US-1, Edison, NJ 08817</text>
+  <rect x="0" y="230" width="460" height="1" fill="#e0e0e0"/>
+  <!-- Listing 3 -->
+  <circle cx="22" cy="258" r="10" fill="#4d5156"/>
+  <text x="22" y="263" fill="white" font-size="11" font-weight="bold" text-anchor="middle">3</text>
+  <text x="42" y="252" fill="#202124" font-size="14" font-weight="600">Mercedes-Benz of Flemington</text>
+  <text x="42" y="268" fill="#FBBC04" font-size="13">★★★★</text>
+  <text x="110" y="268" fill="#70757a" font-size="12">4.3 (612)</text>
+  <text x="42" y="284" fill="#70757a" font-size="12">Mercedes-Benz dealer · Flemington, NJ · 18 mi</text>
+  <rect x="0" y="296" width="460" height="1" fill="#e0e0e0"/>
+  <!-- More places -->
+  <text x="24" y="322" fill="#1a73e8" font-size="13">More places</text>
+  <!-- Watermark -->
+  <text x="440" y="430" fill="#c0c0c0" font-size="10" text-anchor="end">January 2026</text>
+</svg>

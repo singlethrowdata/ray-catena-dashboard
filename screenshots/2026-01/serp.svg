@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Arial,sans-serif">
+  <rect width="760" height="440" fill="#fff"/>
+  <!-- Top bar -->
+  <rect width="760" height="60" fill="#fff"/>
+  <rect y="59" width="760" height="1" fill="#e0e0e0"/>
+  <!-- Google logo text -->
+  <text x="24" y="42" font-size="30" font-weight="bold">
+    <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC04">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+  </text>
+  <!-- Search bar -->
+  <rect x="140" y="13" width="480" height="36" rx="18" fill="#fff" stroke="#dfe1e5" stroke-width="1.5"/>
+  <text x="162" y="36" fill="#202124" font-size="14">ray catena edison</text>
+  <!-- Search nav tabs -->
+  <text x="24" y="82" fill="#1a73e8" font-size="13" font-weight="600">All</text>
+  <text x="60" y="82" fill="#4d5156" font-size="13">Maps</text>
+  <text x="100" y="82" fill="#4d5156" font-size="13">Images</text>
+  <text x="150" y="82" fill="#4d5156" font-size="13">News</text>
+  <rect x="24" y="85" width="22" height="2" fill="#1a73e8"/>
+  <rect y="87" width="760" height="1" fill="#e0e0e0"/>
+  <!-- Result count -->
+  <text x="24" y="108" fill="#70757a" font-size="12">About 4,230,000 results (0.38 seconds)</text>
+  <!-- Position badge -->
+  <rect x="24" y="120" width="30" height="18" rx="3" fill="#1a73e8"/>
+  <text x="39" y="133" fill="white" font-size="11" font-weight="bold" text-anchor="middle">#1</text>
+  <!-- Result 1 - Ray Catena Edison -->
+  <text x="62" y="133" fill="#006621" font-size="13">raycatenaedison.com › new-inventory</text>
+  <text x="24" y="156" fill="#1a0dab" font-size="19" font-weight="600">Ray Catena Edison | New &amp; Used Mercedes-Benz Dealer</text>
+  <!-- Stars -->
+  <text x="24" y="178" fill="#FBBC04" font-size="15">★★★★★</text>
+  <text x="110" y="178" fill="#4d5156" font-size="13">4.8 · 1,247 reviews · Mercedes-Benz dealer</text>
+  <text x="24" y="198" fill="#4d5156" font-size="13">Shop our full inventory of new and certified pre-owned Mercedes-Benz vehicles. Special lease and finance offers available now. Serving Edison, NJ and the Tri-State area.</text>
+  <!-- Sitelinks -->
+  <rect x="24" y="216" width="160" height="46" rx="4" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="34" y="234" fill="#1a0dab" font-size="13" font-weight="500">New Inventory</text>
+  <text x="34" y="252" fill="#4d5156" font-size="11">Browse 200+ new vehicles</text>
+  <rect x="196" y="216" width="160" height="46" rx="4" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="206" y="234" fill="#1a0dab" font-size="13" font-weight="500">Service Center</text>
+  <text x="206" y="252" fill="#4d5156" font-size="11">Book a service appointment</text>
+  <rect x="368" y="216" width="160" height="46" rx="4" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="378" y="234" fill="#1a0dab" font-size="13" font-weight="500">Pre-Owned</text>
+  <text x="378" y="252" fill="#4d5156" font-size="11">Certified CPO vehicles</text>
+  <!-- Divider -->
+  <rect x="24" y="276" width="580" height="1" fill="#e0e0e0"/>
+  <!-- Result 2 (dimmed) -->
+  <text x="24" y="298" fill="#70757a" font-size="13">cars.com › dealer › ray-catena-mercedes-edison</text>
+  <text x="24" y="318" fill="#1a0dab" font-size="17">Ray Catena Mercedes-Benz of Edison - Cars.com</text>
+  <text x="24" y="338" fill="#4d5156" font-size="13">Read 1,247 reviews of Ray Catena Mercedes-Benz of Edison. Browse inventory, get directions, and contact the dealership directly.</text>
+  <!-- Watermark -->
+  <text x="700" y="430" fill="#e0e0e0" font-size="10" text-anchor="end">January 2026</text>
+</svg>
